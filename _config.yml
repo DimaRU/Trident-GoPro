@@ -1,0 +1,12 @@
+theme: jekyll-theme-cayman
+plugins:
+ - github-pages
+ - jekyll-readme-index
+
+title: [Use GoPro official Android app with Trident Drone]
+description: [A short guide]
+color: "#20A1BD"
+google_analytics: UA-158634251-2
+relative_links:
+  enabled: true
+  collections: true
