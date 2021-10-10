@@ -18,7 +18,7 @@ sudo iptables-legacy -D OUTPUT -j trident_cockpit_out || true
 # Provision
 sudo iptables-legacy -t nat -A trident_cockpit_post -d $TARGETIP -j SNAT --to-source $GATEWAYIP
 sudo iptables-legacy -A trident_cockpit_out -p icmp -j ACCEPT
-sudo iptables-legacy -A trident_cockpit_out -s $GATEWAYIP -j DROP
+sudo iptables-legacy -A trident_cockpit_out -s $GATEWAYIP -d 10.5.5.9 -j DROP
 
 sudo iptables-legacy -t nat -I POSTROUTING -j trident_cockpit_post
 sudo iptables-legacy -I OUTPUT -j trident_cockpit_out
